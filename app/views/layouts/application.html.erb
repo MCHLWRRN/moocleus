@@ -8,38 +8,51 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Moocleus</a>
-    </div>
+	<div id="wrap">
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">Moocleus</a>
+		    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Link</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      	<% if user_signed_in? %>
-        	<li><%= link_to 'Log out', destroy_user_session_path, :method => :delete %></li>
-        <% else %>
-        	<li><%= link_to 'Log in', new_user_session_path %></li>
-        	<li><%= link_to 'Sign up', new_user_registration_path %></li>
-        <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="#">Link</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		      	<% if user_signed_in? %>
+		        	<li><%= link_to 'Log out', destroy_user_session_path, :method => :delete %></li>
+		        <% else %>
+		        	<li><%= link_to 'Log in', new_user_session_path %></li>
+		        	<li><%= link_to 'Sign up', new_user_registration_path %></li>
+		        <% end %>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
 
-<% if notice.present? %>
-	<p class="alert alert-info"><%= notice %></p>
-<% end %>
-<% if alert.present? %>
-	<p class="alert alert-danger"><%= alert %></p>
-<% end %>
+		<% if notice.present? %>
+			<p class="alert alert-info"><%= notice %></p>
+		<% end %>
+		<% if alert.present? %>
+			<p class="alert alert-danger"><%= alert %></p>
+		<% end %>
 
-<%= yield %>
+		<%= yield %>
+
+	</div>
+
+	<br class="clr" />
+
+	<div id="footer">
+		<div class="container">
+			<b>Footer Here</b>
+			<br />
+			<%= link_to 'Link', '#' %>
+		</div>
+	</div>
 
 </body>
 </html>
