@@ -12,3 +12,4 @@ class User < ActiveRecord::Base
   	return enrolled_courses.include?(course)
   end
 end
+
