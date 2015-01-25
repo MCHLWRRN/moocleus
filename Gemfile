@@ -57,3 +57,5 @@ gem 'stripe'
 gem 'figaro'
 
 gem 'ranked-model'
+
+gem 'jquery-ui-rails'
