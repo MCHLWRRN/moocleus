@@ -55,3 +55,5 @@ gem 'fog', '~> 1.3.1'
 gem 'stripe'
 
 gem 'figaro'
+
+gem 'ranked-model'
